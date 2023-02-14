@@ -13,7 +13,6 @@ export class MuseumApiService {
     return this.http.get('https://api.artic.edu/api/v1/artworks');
   }
 
-  getArtistes(): Observable<any> {
-    return this.http.get('https://api.artic.edu/api/v1/artists');
-  }
+
+
 }
