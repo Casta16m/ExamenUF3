@@ -9,6 +9,7 @@ import { MuseumApiService } from '../../Serveis/API/museum-api.service';
 export class QuadresComponent {
 
   quadresList!: Array<any>;
+  planes!: number;
 
   constructor(private museumApiService: MuseumApiService) { }
 
@@ -25,7 +26,8 @@ export class QuadresComponent {
 
   public paginate() {
     this.museumApiService.getPagination().subscribe(data => {
-
+      this.planes = data;
+      console.log(this.planes);
     });
   }
 
