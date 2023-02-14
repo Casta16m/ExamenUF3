@@ -1,7 +1,3 @@
-<form>
-    Mida imatge:<input type="text">
-</form>
-
 <table>
     <thead>
         <tr>
@@ -12,7 +8,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let quadre of this.quadresList">
+            <td>{{quadre.id}}</td>
+            <td>{{quadre.title}}</td>
         </tr>
     </tbody>
 </table>

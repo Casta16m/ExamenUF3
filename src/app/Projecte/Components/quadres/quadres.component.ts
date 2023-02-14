@@ -12,14 +12,21 @@ export class QuadresComponent {
 
   constructor(private museumApiService: MuseumApiService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.loadQuadres();
+  }
 
   public loadQuadres() {
     this.museumApiService.getQuadres().subscribe(data => {
       this.quadresList = data;
+      console.log(this.quadresList);
     })
   }
 
+  public paginate() {
+    this.museumApiService.getPagination().subscribe(data => {
 
+    });
+  }
 
 }

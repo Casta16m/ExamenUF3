@@ -13,6 +13,9 @@ export class MuseumApiService {
     return this.http.get('https://api.artic.edu/api/v1/artworks');
   }
 
+  getPagination(): Observable<any> {
+    return this.http.get('https://api.artic.edu/api/v1/artworks?page=1&limit=15');
+  }
 
 
 }
